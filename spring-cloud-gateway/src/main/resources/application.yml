@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ${vcap.application.name:gateway}
+
+security:
+  basic:
+    enabled: false
+
+ribbon:
+  IsSecure: false

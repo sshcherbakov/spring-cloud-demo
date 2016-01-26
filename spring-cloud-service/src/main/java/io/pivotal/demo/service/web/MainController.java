@@ -15,7 +15,7 @@ public class MainController {
 	private String appId;
 
 	@RequestMapping(value="/main", method=RequestMethod.GET)
-	public MainResponse mainService(@RequestParam(value="name", defaultValue="World") String param) {
+	public MainResponse mainService(@RequestParam(value="name", defaultValue="${echo.name:world}") String param) {
 		return new MainResponse(param, appId);
 	}
 	
