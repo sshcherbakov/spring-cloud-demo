@@ -1,11 +1,18 @@
 package io.pivotal.demo.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class MainResponse {
 
 	private String message;
 	private String serviceId;
 
-	public MainResponse(String message, String appId) {
+	@JsonCreator
+	public MainResponse(
+			@JsonProperty("message") String message, 
+			@JsonProperty("appId") String appId) {
+		
 		this.message = message;
 		this.serviceId = appId;
 	}

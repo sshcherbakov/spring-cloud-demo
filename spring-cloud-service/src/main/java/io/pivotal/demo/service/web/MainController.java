@@ -1,4 +1,4 @@
-package io.pivotal.demo.web;
+package io.pivotal.demo.service.web;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;

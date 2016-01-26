@@ -1,1 +1,1 @@
-include 'spring-cloud-gateway', 'spring-cloud-service'
+include 'spring-cloud-common', 'spring-cloud-gateway', 'spring-cloud-service'

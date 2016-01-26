@@ -1,8 +1,11 @@
-package io.pivotal.demo;
+package io.pivotal.demo.gateway;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.web.WebAppConfiguration;
+
+import io.pivotal.demo.gateway.SpringCloudGatewayApplication;
+
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
