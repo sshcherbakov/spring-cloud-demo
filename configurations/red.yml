@@ -1,2 +1,9 @@
 echo:
   name: heat
+
+security:
+  basic:
+    enabled: false
+
+ribbon:
+  IsSecure: false

@@ -1,2 +1,9 @@
 echo:
   name: duck
+
+security:
+  basic:
+    enabled: false
+
+ribbon:
+  IsSecure: false
