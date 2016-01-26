@@ -1,5 +1,5 @@
 echo:
-  name: duck
+  name: duck2
 
 security:
   basic:
