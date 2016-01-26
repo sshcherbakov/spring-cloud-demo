@@ -4,6 +4,9 @@ echo:
 security:
   basic:
     enabled: false
+  user:
+    name: user
+    password: vfabric
 
 ribbon:
   IsSecure: false
