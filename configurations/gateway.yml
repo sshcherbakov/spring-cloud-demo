@@ -2,6 +2,9 @@ zuul:
   routes:
     red: /xxx/**
 
+service:
+  name: red
+
 security:
   basic:
     enabled: false
