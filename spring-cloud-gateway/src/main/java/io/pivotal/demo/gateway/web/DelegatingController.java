@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import io.pivotal.demo.domain.MainResponse;
 
 @RefreshScope
@@ -24,9 +26,9 @@ public class DelegatingController {
 	@Autowired
 	private RestTemplate rest;
 	
-	
+	@HystrixCommand(fallbackMethod="fallbackInvoke")
 	@RequestMapping(value="/invoke", method=RequestMethod.GET)
-	public MainResponse mainService(@RequestParam(value="service", defaultValue="${service.name:red}") String name) {
+	public MainResponse invokeService(@RequestParam(value="service", defaultValue="${service.name:red}") String name) {
 		
 		 URI uri = UriComponentsBuilder.fromUriString("http://{service}/main")
 		            .buildAndExpand(name)
@@ -34,6 +36,10 @@ public class DelegatingController {
 
 		return rest.getForObject(uri, MainResponse.class);
 		
+	}
+	
+	MainResponse fallbackInvoke(String name) {
+		return new MainResponse("error", "error");
 	}
 	
 }
