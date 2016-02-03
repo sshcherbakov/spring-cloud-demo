@@ -58,7 +58,6 @@ project(':spring-cloud-service') {
 		compile project(':spring-cloud-common')
 		compile("io.pivotal.spring.cloud:spring-cloud-services-starter-config-client")
 		compile('org.springframework.boot:spring-boot-starter-actuator')
-		compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')
 		compile('org.springframework.cloud:spring-cloud-starter-config')
 		compile('org.springframework.boot:spring-boot-starter-cloud-connectors')
 		compile('org.springframework.cloud:spring-cloud-starter-eureka')
@@ -77,7 +76,6 @@ project(':spring-cloud-gateway') {
 		compile project(':spring-cloud-common')
 		compile("io.pivotal.spring.cloud:spring-cloud-services-starter-config-client")
 		compile('org.springframework.boot:spring-boot-starter-actuator')
-		compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')
 		compile('org.springframework.cloud:spring-cloud-starter-config')
 		compile('org.springframework.boot:spring-boot-starter-cloud-connectors')
 		compile('org.springframework.cloud:spring-cloud-starter-eureka')
@@ -87,6 +85,7 @@ project(':spring-cloud-gateway') {
 		compile('org.springframework.boot:spring-boot-starter-web')
 		testCompile('org.springframework.boot:spring-boot-starter-test') 
 		compile('org.springframework.cloud:spring-cloud-starter-zuul')
+		compile('org.springframework.cloud:spring-cloud-netflix-hystrix-amqp')
 		//compile('org.springframework.cloud:spring-cloud-starter-oauth2')
 		//compile('org.springframework.cloud:spring-cloud-starter-security')
     }
